@@ -12,7 +12,6 @@
         <input id="studentNameInput" type="text" ng-model="studentName" placeholder="Enter student's name">
         <h1>Hello, {{ studentName || 'World' }}!</h1>
     </div>
-
     <script>
         angular.module('myApp', [])
             .controller('GreetingController', function($scope) {
