@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Greeting App - Question 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="GreetingController">
+        <h1>{{ greeting }}</h1>
+        <button ng-click="increment()">Increment</button>
+        <p>Counter: {{ counter }}</p>
+    </div>
+
+    <script>
+        angular.module('myApp', [])
+            .controller('GreetingController', function($scope) {
+                $scope.greeting = 'This is counter application';
+                $scope.counter = 0;
+                $scope.increment = function() {
+                    $scope.counter++;
+                };
+            });
+    </script>
+</body>
+</html>
